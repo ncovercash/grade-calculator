@@ -1,0 +1,20 @@
+body {
+	@apply bg-white;
+
+	&.dark {
+		@apply bg-grey-900;
+	}
+
+	transition: background 300ms, background-color 300ms, color 300ms;
+
+	&.dark {
+		.show-light-only {
+			@apply hidden;
+		}
+	}
+	&:not(.dark) {
+		.show-dark-only {
+			@apply hidden;
+		}
+	}
+}

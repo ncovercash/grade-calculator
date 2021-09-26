@@ -1,0 +1,10 @@
+{
+	"printWidth": 100,
+	"useTabs": true,
+	"semi": true,
+	"quoteProps": "consistent",
+	"trailingComma": "all",
+	"phpVersion": "7.4",
+	"braceStyle": "1tbs",
+	"proseWrap": "always"
+}
