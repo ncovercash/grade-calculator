@@ -1,0 +1,119 @@
+.dark {
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply text-grey-200;
+	}
+}
+.prose {
+	h1,
+	h2,
+	h3,
+	h4,
+	a.no-color {
+		@apply font-heading;
+		font-weight: 600 !important;
+	}
+
+	[class~="lead"] {
+		font-weight: 550;
+	}
+
+	/* @apply prose-sm sm:prose lg:prose-lg xl:prose-xl; */
+
+	a:not(.no-color) {
+		@apply text-primary-800;
+	}
+	blockquote {
+		@apply text-grey-600;
+		border-left-color: theme("colors.primary.800");
+	}
+	ul > li::before {
+		background-color: #1aabaa !important;
+	}
+
+	img {
+		display: inline-block !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	.inline-wordmark {
+		/* use !important to prevent issues with browser extensions that change fonts */
+		font-family: "wordmark" !important;
+		speak: never;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		font-size: 120%;
+
+		/* Enable Ligatures ================ */
+		letter-spacing: 0;
+		-webkit-font-feature-settings: "liga";
+		-moz-font-feature-settings: "liga=1";
+		-moz-font-feature-settings: "liga";
+		-ms-font-feature-settings: "liga" 1;
+		font-feature-settings: "liga";
+		-webkit-font-variant-ligatures: discretionary-ligatures;
+		font-variant-ligatures: discretionary-ligatures;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-display: swap;
+	}
+
+	.dark &:not(.force-light) {
+		@apply text-grey-200;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		a.no-color {
+			@apply text-grey-100;
+		}
+
+		[class~="lead"] {
+			@apply text-grey-300;
+		}
+		a:not(.no-color) {
+			@apply text-primary-400;
+		}
+		strong {
+			@apply text-grey-200;
+		}
+		ol > li::before {
+			@apply text-grey-200;
+		}
+		hr {
+			border-color: theme("colors.grey.200");
+		}
+		blockquote {
+			@apply text-grey-400;
+			border-left-color: theme("colors.primary.600");
+		}
+		figure figcaption {
+			@apply text-grey-400;
+		}
+		code,
+		pre {
+			@apply text-grey-200;
+		}
+		thead {
+			@apply text-grey-200;
+			border-bottom-color: theme("colors.grey.500");
+		}
+		tbody tr {
+			border-bottom-color: theme("colors.grey.700");
+		}
+	}
+}
+
+.prose.max-w-none {
+	@apply px-4 md:px-0;
+	max-width: none !important;
+}

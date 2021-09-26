@@ -1,0 +1,109 @@
+header {
+	@apply bg-primary-600 text-white;
+
+	.dark & {
+		@apply bg-primary-700;
+	}
+
+	a:hover,
+	a:focus {
+		@apply underline;
+	}
+
+	.navbar-container {
+		@apply container relative;
+		@apply flex flex-wrap flex-col;
+		@apply md:flex-row items-center;
+		@apply pt-2 md:pt-0;
+
+		.material-icons-round {
+			/* sidenav icon */
+			@apply absolute left-4 md:hidden;
+
+			top: 1.1rem;
+			@apply left-5;
+
+			@apply no-underline;
+			font-size: 2.5rem;
+		}
+
+		> a {
+			/* logo space */
+			@apply flex items-center;
+			@apply mb-2 md:mb-0;
+
+			img {
+				height: 3.75rem;
+				@apply py-1;
+			}
+		}
+
+		nav {
+			@apply flex flex-wrap items-center justify-center;
+			@apply text-lg font-medium;
+			@apply md:ml-auto;
+
+			a {
+				@apply p-5;
+				@apply md:rounded-md;
+
+				&:hover,
+				&:focus {
+					@apply bg-primary-700;
+				}
+				.dark &:hover,
+				.dark &:focus {
+					@apply bg-primary-800;
+				}
+
+				&:not(.mobile-icon) {
+					@apply hidden md:flex;
+				}
+				&.mobile-icon {
+					@apply flex md:hidden;
+
+					&:hover {
+						background-color: initial;
+					}
+				}
+			}
+
+			.dropdown {
+				@apply relative;
+
+				> a {
+					@apply rounded-t-md rounded-b-none;
+				}
+
+				.dropdown-menu {
+					@apply bg-primary-700 text-white shadow-lg;
+
+					a {
+						@apply inline-block w-full;
+					}
+
+					a:hover {
+						@apply bg-primary-800;
+					}
+
+					.dark & {
+						@apply bg-primary-600;
+
+						a:hover {
+							@apply bg-primary-700;
+						}
+					}
+
+					@apply hidden absolute w-full rounded-b-md;
+				}
+			}
+
+			.dropdown:hover,
+			.dropdown:focus {
+				.dropdown-menu {
+					@apply block;
+				}
+			}
+		}
+	}
+}

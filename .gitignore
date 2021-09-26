@@ -1,0 +1,15 @@
+.DS_Store
+
+grade-calculator.sublime-workspace
+
+node_modules
+src/php/vendor
+
+dist/
+scripts/messages.js
+scripts/messages.js.map
+scripts/message-sender.js
+scripts/message-sender.js.map
+scripts/tsconfig.tsbuildinfo
+
+secrets.json

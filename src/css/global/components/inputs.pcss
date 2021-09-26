@@ -1,0 +1,99 @@
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+textarea,
+select {
+	/* @apply max-w-xs w-full;
+	@screen md {
+		@apply max-w-sm;
+	}
+	@screen lg {
+		@apply max-w-md;
+	} */
+	@apply rounded-md bg-grey-100;
+	@apply focus:border-grey-500;
+	@apply focus:bg-white focus:ring-0;
+
+	.dark & {
+		@apply bg-grey-800 text-white;
+		@apply focus:bg-grey-700;
+	}
+
+	&.invalid {
+		border-color: #dc2626 !important;
+	}
+
+	&.valid {
+		border-color: #059669 !important;
+	}
+}
+
+button.form-submit,
+input[type="submit"] {
+	@apply px-3 py-2;
+	@apply rounded-md bg-black text-white;
+	@apply focus:ring-1;
+
+	.dark & {
+		@apply bg-white text-black;
+		@apply focus:ring-0;
+	}
+
+	div {
+		@apply flex flex-row items-center justify-center;
+		/* 
+		&::before {
+			content: " ";
+
+			@apply animate-spin inline-block flex-initial h-6 w-6 mr-2;
+
+			background-image: url("/www/img/loading.svg");
+
+			form:not(.loading) & {
+				@apply hidden;
+			}
+		} */
+
+		span {
+			@apply flex-initial;
+		}
+	}
+
+	.loading & {
+		cursor: not-allowed;
+	}
+}
+
+form > p {
+	@apply text-center mt-4 text-xl;
+	flex-basis: 100%;
+
+	a {
+		@apply font-semibold underline;
+	}
+}
+
+p.error-text {
+	@apply text-center mt-4 text-xl;
+	color: #dc2626;
+	.dark & {
+		color: #ef4444;
+	}
+}
+
+p.success-text {
+	@apply text-center mt-4 text-xl;
+	color: #059669;
+	.dark & {
+		color: #10b981;
+	}
+}
+
+.otp-code {
+	@apply font-monospace;
+	@apply flex flex-row flex-wrap items-baseline justify-around;
+
+	span {
+		@apply flex-1 mx-2;
+	}
+}

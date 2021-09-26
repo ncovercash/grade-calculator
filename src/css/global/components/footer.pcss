@@ -1,0 +1,46 @@
+body {
+	@apply flex flex-col h-screen justify-between;
+
+	main {
+		@apply mb-auto mt-0 mx-0 max-w-none;
+	}
+}
+
+footer {
+	@apply bg-primary-600 text-white;
+
+	.dark & {
+		@apply bg-primary-700;
+	}
+
+	a {
+		@apply no-underline;
+
+		&:hover {
+			@apply underline;
+		}
+	}
+
+	> div {
+		@apply sm:mx-4 md:mx-auto;
+		@apply py-5;
+
+		vertical-align: middle;
+
+		p {
+			@apply text-base;
+			/*@apply sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0;*/
+			/* @apply sm:border-l-2 sm:border-grey-200; */ /* add | to left side */
+		}
+
+		button {
+			.dark & .sun {
+				@apply hidden;
+			}
+
+			body:not(.dark) & .moon {
+				@apply hidden;
+			}
+		}
+	}
+}

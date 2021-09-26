@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"dist",
+				"www/dist",
+				"node_modules",
+			],
+			"name": "grade-calculator",
+			"path": "."
+		}
+	]
+}

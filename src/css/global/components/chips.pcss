@@ -1,0 +1,124 @@
+.chip {
+	@apply inline-block rounded-2xl break-all;
+	@apply text-white text-xl;
+	min-height: 2rem;
+
+	@apply mx-0.5 my-1;
+
+	&.blackened {
+		@apply bg-black text-white;
+
+		.dark & {
+			@apply bg-white text-black;
+
+			img {
+				filter: invert(1);
+			}
+		}
+	}
+
+	img {
+		@apply float-left rounded-none;
+		@apply h-5 mt-1.5 ml-1.5;
+	}
+
+	> span {
+		@apply inline-block mt-0.5 ml-1 mr-2;
+
+		&:not(.font-normal) {
+			@apply font-heading;
+		}
+	}
+
+	@screen md {
+		@apply rounded-3xl;
+		@apply text-3xl;
+		min-height: 3rem;
+
+		@apply mx-0.5 my-2;
+
+		img {
+			@apply h-8 mt-2 ml-2;
+		}
+
+		> span {
+			@apply mt-1.5 mr-3;
+		}
+	}
+}
+
+.social-circle {
+	@apply inline-block flex-initial;
+
+	img {
+		--extra-left-margin: 0rem;
+		--extra-top-margin: 0rem;
+
+		&[src*="kofi"] {
+			--extra-top-margin: 0.1rem;
+			--extra-left-margin: 0.15rem;
+		}
+		&[src*="telegram"] {
+			--extra-left-margin: -0.2rem;
+		}
+		&[src*="twitter"] {
+			--extra-top-margin: 0.1rem;
+			--extra-left-margin: 0.1rem;
+		}
+	}
+
+	> div {
+		@apply inline-block rounded-full;
+
+		.dark & {
+			@apply bg-white text-black;
+			img {
+				filter: invert(1);
+			}
+		}
+		body:not(.dark) & {
+			@apply bg-black text-white;
+		}
+
+		@apply w-16 h-16;
+		@apply mx-4 my-2;
+
+		img {
+			@apply h-10;
+			margin-top: calc(0.75rem + var(--extra-top-margin));
+			margin-left: calc(0.75rem + var(--extra-left-margin));
+		}
+	}
+
+	@screen md {
+		> div {
+			@apply w-20 h-20;
+			@apply mx-3 my-1.5;
+
+			img {
+				@apply h-12;
+				margin-top: calc(1rem + var(--extra-top-margin));
+				margin-left: calc(1rem + var(--extra-left-margin));
+			}
+		}
+	}
+
+	@screen lg {
+		> div {
+			@apply mx-4 my-1.5;
+		}
+	}
+
+	@screen 2xl {
+		> div {
+			@apply w-28 h-28;
+			@apply mx-3 my-1.5;
+
+			img {
+				@apply h-16;
+				margin-top: calc(1.5rem + var(--extra-top-margin));
+				margin-left: calc(1.5rem + var(--extra-left-margin));
+			}
+		}
+	}
+}

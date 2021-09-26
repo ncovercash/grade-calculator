@@ -1,0 +1,65 @@
+.sidenav {
+	@apply md:hidden;
+
+	transition: visibility 500ms;
+
+	&:not(.active) {
+		@apply invisible;
+		#sidenav-overlay {
+			@apply opacity-0;
+		}
+		nav {
+			@apply -left-full;
+		}
+	}
+	&.active {
+		@apply visible;
+		#sidenav-overlay {
+			@apply opacity-100;
+		}
+	}
+
+	#sidenav-overlay {
+		@apply fixed w-screen h-screen inset-0;
+		z-index: 97;
+		background-color: rgba(0, 0, 0, 0.3);
+
+		transition: opacity 300ms;
+
+		#sidenav-close {
+			@apply fixed right-2 top-2;
+			@apply text-4xl text-white;
+			/* z-index: 98; */
+		}
+	}
+
+	nav {
+		@apply fixed left-0 top-0 w-4/5 bg-white h-screen shadow-lg;
+		z-index: 99;
+
+		@apply pt-2;
+
+		transition: left 500ms;
+
+		a {
+			@apply block px-6 py-4 text-lg font-medium;
+
+			&:hover,
+			&:focus {
+				@apply bg-grey-100;
+			}
+		}
+
+		.dark & {
+			@apply bg-grey-900;
+			a {
+				@apply text-grey-100;
+
+				&:hover,
+				&:focus {
+					@apply bg-grey-800;
+				}
+			}
+		}
+	}
+}
