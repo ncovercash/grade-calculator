@@ -23,6 +23,8 @@ if (localStorage.getItem("dark") === "true") {
 whenDomReady().then((): void => {
 	debug("Document onload fired!");
 
+	new Store();
+
 	if (document.querySelector("nav")) {
 		createNavbar(...(Array.from(document.querySelectorAll("nav")) as [HTMLElement, HTMLElement]));
 	}
@@ -30,6 +32,5 @@ whenDomReady().then((): void => {
 		drawFooter(document.querySelector("footer"));
 	}
 
-	new Store();
 	new MainPage();
 });

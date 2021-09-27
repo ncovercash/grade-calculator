@@ -6,8 +6,14 @@ header {
 	}
 
 	a:hover,
-	a:focus {
+	a.active {
 		@apply underline;
+	}
+
+	.site-name {
+		@apply font-heading;
+		@apply mt-2;
+		@apply text-4xl;
 	}
 
 	.navbar-container {
@@ -48,11 +54,11 @@ header {
 				@apply md:rounded-md;
 
 				&:hover,
-				&:focus {
+				&.active {
 					@apply bg-primary-700;
 				}
 				.dark &:hover,
-				.dark &:focus {
+				.dark &.active {
 					@apply bg-primary-800;
 				}
 

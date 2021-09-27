@@ -1,93 +1,124 @@
-
 <!DOCTYPE html>
 <html>
-<head lang="en">
-	<meta charset="utf-8" />
+	<head lang="en">
+		<meta charset="utf-8" />
 
-	<title>
-		Grade Calculator
-	</title>
+		<title>Grade Calculator</title>
 
-	<link rel="stylesheet" href="dist/css/shared.styles.css" />
+		<link rel="stylesheet" href="dist/css/shared.styles.css" />
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;550;600;700;800&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Material+Icons+Round&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Material+Icons+Round&display=swap"
+			rel="stylesheet"
+		/>
 
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<meta property="description" content="A versatile grade calculator that supports drops, replacements, and more."/>
-	<meta name="keywords" content="gradebook, grades, university, college, grade, mark, scores, test, exam"/>
-	<meta name="subject" content="gradebook, grades, university, college, grade, mark, scores, test, exam"/>
-	<meta name="copyright" content="Noah Overcash"/>
-	<meta name="language" content="EN"/>
-	<meta name="robots" content="index,follow"/>
-	<meta name="reply-to" content="me@ncovercash.dev"/>
-	<meta name="theme-color" content="#F87171"/>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta
+			property="description"
+			content="A versatile grade calculator that supports drops, replacements, and more."
+		/>
+		<meta
+			name="keywords"
+			content="gradebook, grades, university, college, grade, mark, scores, test, exam"
+		/>
+		<meta
+			name="subject"
+			content="gradebook, grades, university, college, grade, mark, scores, test, exam"
+		/>
+		<meta name="copyright" content="Noah Overcash" />
+		<meta name="language" content="EN" />
+		<meta name="robots" content="index,follow" />
+		<meta name="reply-to" content="me@ncovercash.dev" />
+		<meta name="theme-color" content="#F87171" />
 
-	<!-- Apple -->
-	<meta name="apple-mobile-web-app-title" content="Grade Calculator"/>
-	<meta name="apple-mobile-web-app-capable" content="yes"/>
-	<meta name="apple-touch-fullscreen" content="yes"/>
-	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-	<meta name="format-detection" content="telephone=no"/>
-	<link href="/img/square.png" rel="apple-touch-icon" type="image/png"/>
-	<link href="/img/square.png" rel="apple-touch-icon-precomposed" type="image/png"/>
-	<link href="/img/square.png" rel="apple-touch-icon" type="image/png"/>
-	<link href="/img/square.png" rel="apple-touch-icon-precomposed" type="image/png"/>
-	<!-- <link rel="mask-icon" href="/img/square.png" color="#F87171"/> -->
+		<!-- Apple -->
+		<meta name="apple-mobile-web-app-title" content="Grade Calculator" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<link href="/img/square.png" rel="apple-touch-icon" type="image/png" />
+		<link href="/img/square.png" rel="apple-touch-icon-precomposed" type="image/png" />
+		<link href="/img/square.png" rel="apple-touch-icon" type="image/png" />
+		<link href="/img/square.png" rel="apple-touch-icon-precomposed" type="image/png" />
+		<!-- <link rel="mask-icon" href="/img/square.png" color="#F87171"/> -->
 
-	<!-- IE -->
-	<meta name="msapplication-tooltip" content="Grade Calculator"/>
-	<meta name="mssmarttagspreventparsing" content="true"/>
-	<meta name="msapplication-starturl" content="https://ncovercash.dev/Projects/Grade-Calculator/"/>
-	<meta name="msapplication-window" content="width=800;height=600"/>
-	<meta name="msapplication-navbutton-color" content="#F87171"/>
+		<!-- IE -->
+		<meta name="msapplication-tooltip" content="Grade Calculator" />
+		<meta name="mssmarttagspreventparsing" content="true" />
+		<meta
+			name="msapplication-starturl"
+			content="https://ncovercash.dev/Projects/Grade-Calculator/"
+		/>
+		<meta name="msapplication-window" content="width=800;height=600" />
+		<meta name="msapplication-navbutton-color" content="#F87171" />
 
-	<!-- win 8+ -->
-	<meta name="application-name" content="Grade Calculator"/>
-	<meta name="msapplication-TileColor" content="#F87171"/>
-	<meta name="msapplication-square70x70logo" content="/img/square.png"/>
+		<!-- win 8+ -->
+		<meta name="application-name" content="Grade Calculator" />
+		<meta name="msapplication-TileColor" content="#F87171" />
+		<meta name="msapplication-square70x70logo" content="/img/square.png" />
 
-	<!-- opengraph -->
-	<meta property="og:title" content="Grade Calculator"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://ncovercash.dev/Projects/Grade-Calculator/"/>
-	<meta property="og:image" content="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png"/>
-	<meta property="og:image:url" content="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png"/>
-	<meta property="og:description" content="A versatile grade calculator that supports drops, replacements, and more.!"/>
-	<meta property="og:site_name" content="Grade Calculator"/>
-	<meta property="og:locale" content="en_US"/>
+		<!-- opengraph -->
+		<meta property="og:title" content="Grade Calculator" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://ncovercash.dev/Projects/Grade-Calculator/" />
+		<meta
+			property="og:image"
+			content="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png"
+		/>
+		<meta
+			property="og:image:url"
+			content="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png"
+		/>
+		<meta
+			property="og:description"
+			content="A versatile grade calculator that supports drops, replacements, and more.!"
+		/>
+		<meta property="og:site_name" content="Grade Calculator" />
+		<meta property="og:locale" content="en_US" />
 
-	<!-- twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="https://ncovercash.dev/Projects/Grade-Calculator/" />
-	<meta name="twitter:title" content="Grade Calculator" />
-	<meta name="twitter:description" content="A versatile grade calculator that supports drops, replacements, and more." />
-	<meta property="twitter:image" content="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png"/>
+		<!-- twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="https://ncovercash.dev/Projects/Grade-Calculator/" />
+		<meta name="twitter:title" content="Grade Calculator" />
+		<meta
+			name="twitter:description"
+			content="A versatile grade calculator that supports drops, replacements, and more."
+		/>
+		<meta
+			property="twitter:image"
+			content="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png"
+		/>
 
-	<!-- link tags -->
-	<link rel='shortcut icon' type='image/png' href='/img/square.png'/>
-	<link rel='fluid-icon' type='image/png' href='/img/square.png'/>
-	<link rel="canonical" href="https://ncovercash.dev/Projects/Grade-Calculator/"/>
-	<link rel="image_src" href="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png" type="image/png"/>
+		<!-- link tags -->
+		<link rel="shortcut icon" type="image/png" href="/img/square.png" />
+		<link rel="fluid-icon" type="image/png" href="/img/square.png" />
+		<link rel="canonical" href="https://ncovercash.dev/Projects/Grade-Calculator/" />
+		<link
+			rel="image_src"
+			href="https://ncovercash.dev/Projects/Grade-Calculator/img/banner-small.png"
+			type="image/png"
+		/>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MLN7PHZ6V"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4MLN7PHZ6V"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-		gtag('config', 'G-L7X3FJ66KY');
-	</script>
-</head>
+			gtag("config", "G-L7X3FJ66KY");
+		</script>
+	</head>
 	<body>
 		<header>
 			<div class="navbar-container">
 				<button id="sidenav-trigger" class="mobile-icon material-icons-round -mt-3">menu</button>
 
-				<a href="/" class="text-3xl">
-					Grade Calculator
-				</a>
+				<span class="site-name">Grade Calculator</span>
 
 				<nav></nav>
 			</div>
@@ -101,10 +132,8 @@
 			<nav></nav>
 		</div>
 
-		<main class="container mx-auto">
-		</main>
-		<footer>
-		</footer>
+		<main class="container mx-auto"></main>
+		<footer></footer>
 	</body>
 
 	<script src="dist/js/runtime.bundle.js"></script>

@@ -27,7 +27,7 @@ module.exports = {
 			black: colors.black,
 		},
 		fontFamily: {
-			heading: `"Dosis", sans, sans-serif`,
+			heading: `"Balsamiq Sans", sans, sans-serif`,
 			round: `"M PLUS Rounded 1c", sans, sans-serif`,
 			sans: `ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
 			serif: `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif`,

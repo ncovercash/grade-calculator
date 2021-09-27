@@ -14,6 +14,7 @@
 	},
 	"homepage": "https://ncovercash.dev/Projects/Grade-Calculator",
 	"dependencies": {
+		"@shopify/draggable": "^1.0.0-beta.12",
 		"@tailwindcss/forms": "^0.3.3",
 		"@tailwindcss/typography": "^0.4.1",
 		"autoprefixer": "^10.3.6",
@@ -21,7 +22,6 @@
 		"debug": "^4.3.2",
 		"escape-html": "^1.0.3",
 		"numeral": "^2.0.6",
-		"randomstring": "^1.2.1",
 		"store2": "^2.12.0",
 		"stream-browserify": "^3.0.0",
 		"tailwindcss": "^2.2.15",
@@ -36,7 +36,6 @@
 		"@types/debug": "4.1.7",
 		"@types/escape-html": "^1.0.1",
 		"@types/numeral": "2.0.2",
-		"@types/randomstring": "1.1.7",
 		"@types/when-dom-ready": "1.2.0",
 		"@typescript-eslint/eslint-plugin": "4.31.2",
 		"@typescript-eslint/parser": "4.31.2",
