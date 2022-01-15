@@ -15,7 +15,7 @@
 	"homepage": "https://ncovercash.dev/Projects/Grade-Calculator",
 	"dependencies": {
 		"@shopify/draggable": "^1.0.0-beta.12",
-		"@tailwindcss/forms": "^0.3.3",
+		"@tailwindcss/forms": "^0.4.0",
 		"@tailwindcss/typography": "^0.4.1",
 		"autoprefixer": "^10.3.6",
 		"dayjs": "^1.10.7",
