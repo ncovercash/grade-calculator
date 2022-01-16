@@ -1,0 +1,4 @@
+.oop {
+  color: green;
+  @apply text-7xl font-heading;
+}

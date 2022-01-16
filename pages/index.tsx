@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styles from "./test.module.css";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         <title>Test title</title>
       </Head>
       <section>
-        <h1>Testing</h1>
+        <h1 className={styles.oop}>Testing</h1>
       </section>
     </div>
   );
