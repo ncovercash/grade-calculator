@@ -1,10 +1,37 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
+import store from "store2";
 import Head from "next/head";
+import React, { useEffect, useState } from "react";
+import debug from "debug";
+import { Course } from "./types";
+const log = debug("_app");
 
-function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
+  const [courses, setCourses] = useState({});
+
+  useEffect(() => {
+    store.set("data", {}, false);
+    setCourses(store.get("data") as Record<string, Course>);
+
+    const listener = (e: StorageEvent) => {
+      if (e.key === "data") {
+        log("Storage changed (likely in a different tab)");
+        setCourses(store.get("data") as Record<string, Course>);
+      }
+    };
+
+    log("Registering storage listener");
+    window.addEventListener("storage", listener);
+
+    return () => {
+      log("Removing storage listener");
+      window.removeEventListener("storage", listener);
+    };
+  }, []);
+
   return (
-    <>
+    <React.StrictMode>
       <Head>
         <title>Grade Calculator</title>
 
@@ -82,9 +109,16 @@ function App({ Component, pageProps }: AppProps) {
           href="https://ncovercash.dev/Projects/Grade-Calculator/"
         />
       </Head>
-      <Component {...pageProps} />
-    </>
+
+      <Component
+        {...pageProps}
+        courses={courses}
+        onCourseChange={(data: Record<string, Course>) => {
+          store.set("data", data);
+          log("Setting");
+          setCourses(data);
+        }}
+      />
+    </React.StrictMode>
   );
 }
-
-export default App;
