@@ -57,7 +57,7 @@
 		"postcss-import": "14.0.2",
 		"postcss-loader": "6.2.1",
 		"postcss-nested": "5.0.6",
-		"postcss-preset-env": "7.3.3",
+		"postcss-preset-env": "7.4.1",
 		"prettier": "2.5.1",
 		"prettier-plugin-organize-imports": "2.3.4",
 		"purgecss": "4.1.3",
