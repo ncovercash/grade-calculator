@@ -52,7 +52,7 @@
 		"globby": "13.1.1",
 		"husky": "7.0.4",
 		"lint-staged": "12.3.4",
-		"mini-css-extract-plugin": "2.5.3",
+		"mini-css-extract-plugin": "2.6.0",
 		"postcss": "8.4.7",
 		"postcss-import": "14.0.2",
 		"postcss-loader": "6.2.1",
