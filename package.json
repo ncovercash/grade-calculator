@@ -28,11 +28,11 @@
 		"when-dom-ready": "^1.2.12"
 	},
 	"devDependencies": {
-		"@babel/core": "7.17.5",
+		"@babel/core": "7.17.7",
 		"@babel/plugin-proposal-class-properties": "7.16.7",
 		"@babel/preset-env": "7.16.11",
 		"@babel/preset-typescript": "7.16.7",
-		"@babel/runtime-corejs3": "7.17.2",
+		"@babel/runtime-corejs3": "7.17.7",
 		"@types/debug": "4.1.7",
 		"@types/escape-html": "1.0.1",
 		"@types/numeral": "2.0.2",
