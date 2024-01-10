@@ -35,7 +35,7 @@
 		"@babel/runtime-corejs3": "7.23.8",
 		"@types/debug": "4.1.12",
 		"@types/escape-html": "1.0.4",
-		"@types/numeral": "2.0.3",
+		"@types/numeral": "2.0.5",
 		"@types/when-dom-ready": "1.2.0",
 		"@typescript-eslint/eslint-plugin": "5.62.0",
 		"@typescript-eslint/parser": "5.62.0",
