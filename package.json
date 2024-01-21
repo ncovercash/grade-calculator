@@ -42,7 +42,7 @@
 		"babel-loader": "8.3.0",
 		"buffer": "6.0.3",
 		"clean-webpack-plugin": "4.0.0",
-		"core-js": "3.35.0",
+		"core-js": "3.35.1",
 		"crypto-browserify": "3.12.0",
 		"css-loader": "6.9.1",
 		"cssnano": "5.1.15",
